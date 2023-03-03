@@ -1,0 +1,320 @@
+/*Reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    text-decoration: none;
+}
+
+body{
+    font-size: 0.8125em;
+    background-color: var(--Grayish-Blue);
+    font-family: 'Manrope', sans-serif;
+}
+
+h3{
+   font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+p{
+    color: var(--Desaturated-Dark-Blue);
+}
+
+ul{
+    list-style: none;
+}
+
+
+
+:root{
+--Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+--Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+--Grayish-Blue: hsl(212, 23%, 69%);
+--Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+
+/*Card*/
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 332px;
+    height: 513px;
+    margin: 120px auto;
+    border-radius: 10px;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+/*content box img*/
+
+.content-box img{
+    width: 332px;
+    height: 200px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+
+.barra-social .profile{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: 25px;
+    left: 15px;
+}
+
+
+.barra-social .profile img{
+    border-radius: 25px;
+    margin-left: 10px;
+}
+
+.yourName{
+    position: relative;
+    top: 5px;
+    left: 15px;
+}
+
+.box-info-central .box-2{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+
+
+/*menuToggle*/
+
+.menuToggle{
+    cursor: pointer;
+}
+
+.menuToggle::before{
+    content: "";
+    position: absolute;
+    font-size: 3em;
+    font-weight: 200;
+    transition: 1.5s;
+}
+
+.menuToggle.active::before{
+    transform: rotate(255deg);
+}
+
+.share{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+
+.share-1{
+  position: relative;
+  background-color:var(--Very-Dark-Grayish-Blue);
+  top: -9px;
+  left: 260px;
+}
+
+.share-2{
+    display: flex;
+    background-color:var(--Grayish-Blue);
+    position: relative;
+    left: 55px;
+    
+}
+
+.space-2{
+    margin-left: 15px;
+}
+
+
+i{
+    font-size: 25px;
+    color: #fff;
+}
+
+
+.li1:hover{
+    color: #418578;
+}
+
+.menu{
+    position: absolute;
+    background-color:var(--Very-Dark-Grayish-Blue);
+    position: absolute;
+    top: 569px;
+    left: 76px;
+    z-index: -1;
+    transition: tranform 0.5s, width 0.5s, height 0.5s;
+    transition-delay: 1s, 0.5s, 0.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menuToggle.active ~ .menu{
+    position: absolute;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    width: 332px;
+    height: 64px;
+    z-index: 1;
+}
+
+/*Menu ul comportamento da caixa*/
+
+.menu ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 5px;
+    padding: 5px 0 0 5px;
+}
+
+.menu ul li  i {
+    margin-top: 20px;
+    margin-left: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s;
+    transition-delay: calc(0s + var(--i));
+}
+
+.menuToggle.active ~ .menu ul li i {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: calc(0.15s + var(--i));
+}
+
+.menu ul li  a i{
+    display: block;
+    text-decoration: none;
+}
+#im {   
+    border-radius: 25px;
+    padding: 25px;
+}
+
+
+#shared a{
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: var(--Grayish-Blue);
+    position: relative;
+    top: 10px;
+    left: 15px;
+}
+
+
+
+@media screen and (min-width:1440px) {
+
+
+    .card{
+        flex-direction: row;
+        width: 731px;
+        height: 282px;
+        margin: 250px auto;
+    }
+
+    .break{
+        display: none;
+    }
+
+    h3{
+        font-size: 18px;
+     }
+     
+    .content-box img{
+    width: 287px;
+    height: 282px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+ 
+    }
+
+    .box-info-central{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 25px;
+    padding-top: 10px;
+    }
+
+   .barra-social .profile img{
+    border-radius: 25px;
+    margin-left: 10px;
+    }
+
+    .barra-social .profile{
+        position: relative;
+        top: 15px;
+        left: 15px;
+    }
+
+
+    .share-1{
+        position: relative;
+        top: -18px;
+        left: 337px;
+      }
+      
+    .close{
+        display: none;
+      }
+
+    .menu{
+        top: 380px;
+        left: 865px;
+        border-radius: 10px;
+    }
+
+    .menu::before{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: var(--Very-Dark-Grayish-Blue);
+        left: calc(50% - 8px);
+        bottom: 4px;
+        transform: rotate(45deg);
+        border-radius: 2px;
+        transition: 0.5s;
+    }
+
+    .menuToggle.active ~ .menu{
+        padding-left: 10px;
+        top: 380px;
+        left: 899px;
+        width: 240px;
+        height: 55px;
+    }
+
+    .menuToggle.active ~ .menu::before{
+        transition-delay: 0.5s;
+        bottom: -8px;
+    }
+    
+    .share{
+    background-color: var(--Grayish-Blue);
+    width: 35px;
+    height: 35px;
+    }
+
+    .menu ul li  i {
+        margin-bottom: 10px;
+    }
+
+    #shared a{
+    top: 5px;
+    }
+      
+}
